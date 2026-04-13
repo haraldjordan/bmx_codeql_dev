@@ -15,7 +15,7 @@ endif()
 project(bmx
     VERSION 1.7
     DESCRIPTION "A C++ library and set of utilities to read and write the SMPTE ST 377-1 MXF file format"
-    HOMEPAGE_URL https://github.com/bbc/bmx
+    HOMEPAGE_URL https://github.com/ebu/bmx
     LANGUAGES C CXX
 )
 

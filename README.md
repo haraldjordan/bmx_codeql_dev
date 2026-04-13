@@ -156,7 +156,7 @@ project(example_project LANGUAGES CXX)
 
 include(FetchContent)
 FetchContent_Declare(bmx
-    GIT_REPOSITORY "https://github.com/bbc/bmx"
+    GIT_REPOSITORY "https://github.com/ebu/bmx"
     GIT_TAG "origin/main"
 )
 FetchContent_MakeAvailable(bmx)
