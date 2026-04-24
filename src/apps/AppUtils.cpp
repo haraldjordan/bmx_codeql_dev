@@ -881,17 +881,15 @@ bool bmx::parse_bytes_size(const char *size_str, int64_t *size_out)
     while ((*suffix >= '0' && *suffix <= '9') || *suffix == '.')
         suffix++;
 
-    if (suffix) {
-        if (*suffix == 'k' || *suffix == 'K')
-            sizef *= 1024.0;
-        if (*suffix == 'm' || *suffix == 'M')
-            sizef *= 1048576.0;
-        if (*suffix == 'g' || *suffix == 'G')
-            sizef *= 1073741824.0;
-        if (*suffix == 't' || *suffix == 'T')
-            sizef *= 1099511627776.0;
-    }
-
+    if (*suffix == 'k' || *suffix == 'K')
+        sizef *= 1024.0;
+    if (*suffix == 'm' || *suffix == 'M')
+        sizef *= 1048576.0;
+    if (*suffix == 'g' || *suffix == 'G')
+        sizef *= 1073741824.0;
+    if (*suffix == 't' || *suffix == 'T')
+        sizef *= 1099511627776.0;
+    
     *size_out = (int64_t)(sizef + 0.5);
     return true;
 }
